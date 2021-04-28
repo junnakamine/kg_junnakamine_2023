@@ -1,9 +1,11 @@
 //Given an array of integers, returns phonetic equaivalent of the integers
 function arrayIntToString(arr) {
     let phonetic = ""
+
     for (var i = 0; i < arr.length; i++) {
         let number = arr[i]
         let number_as_str = convertToString(number)
+
         if (i == arr.length - 1) {
             phonetic += number_as_str
         } else {
@@ -11,7 +13,6 @@ function arrayIntToString(arr) {
         }
     }
     return phonetic
-
 }
 
 
@@ -38,3 +39,5 @@ function convertToString(number) {
     }
     return conversion
 }
+
+module.exports = {arrayIntToString};    
